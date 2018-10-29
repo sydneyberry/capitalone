@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta charset="utf-8">
+
+    <!--Chart Js-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+
+    <title>Capital One Challenge 2018</title>
+  </head>
+
+  <body>
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.js"></script>
+
+
+    <div class="navbar-fixed">
+        <nav>
+          <div class="nav-wrapper">
+            <!--<a href="#!" class="brand-logo"></a>-->
+            <ul class="right hide-on-med-and-down">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="process.html">Data Visuals</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+
+      <!-- particles.js container -->
+      <div id="particles-js" style="height:70%;width:100%"></div>
+
+      <!--Particles Scripts -->
+      <script src="js/particles.js"></script>
+      <script src="js/app.js"></script>
+
+      <div class="container" id="head">
+      </br></br>
+        <h1 class="white-text center-align"><b>Bike Share Challenge</b></h1>
+        <!--change to blue text-->
+        <h5 class="grey-text center-align">Deliverable One: Data Visuals</h5>
+      </div>
+</br></br></br></br></br></br>
+
+      <div class="container">
+         <div class="row">
+
+         </div>
+         <!-- TABLE FOR-->
+         <div class="row">
+               <div class="col s12 m12 l12">
+                  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.4/Chart.min.js"></script>
+                  <h5 align="center">Types of Passes</h5>
+
+                          <!--<h2 class="dark-blue-text center"><b>Here's what I've been up to</b></h2>-->
+                    <canvas id="myChart" height="100" width="300"></canvas>
+
+                     <script>
+                     var ctx = document.getElementById('myChart').getContext('2d');
+                     var myChart = new Chart(ctx, {
+                       type: 'horizontalBar',
+                       data: {
+                         labels: ['Flex Pass', 'Monthly Pass', 'Staff Annual', 'Walk-Up'],
+                         datasets: [{
+                           data: [9517, 81304, 382, 41224],
+                           backgroundColor: ["#D13028", "#9E241E", "#741E19", "#5C1512"],
+                           label: 'Average Distance'
+                        }]
+                     },
+                    //},
+                    options: {
+                       legend: {display: false},
+                       title: {
+                          display: true,
+                          text: 'Number of each passes used'
+                       }
+                    }
+                    });
+                        </script>
+               </div>
+               <div class="col s12 m12 l12">
+                  <p align="left">The bar graph on the left represents how many of each pass type were used over the quarter. Looking at this, the monthly pass was the most common pass, while the staff annual was the least used pass. There was a large range between these two types that comes out to a 80,922 pass difference. If you hover each bar, you can see the specific amount of each.</p>
+               </div>
+            </div>
+
+            <!--Visual Two-->
+            <div class="row">
+               <div class="col s12 m12 l12">
+                  <h5 align="center">Average Duration Bikes were held</h5>
+                  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.4/Chart.min.js"></script>
+                          <!--<h2 class="dark-blue-text center"><b>Here's what I've been up to</b></h2>-->
+                  <canvas id="monthChart" height="75" width="200"></canvas>
+
+                  <script>
+                  var ctx = document.getElementById('monthChart').getContext('2d');
+                  var myChart = new Chart(ctx, {
+                    type: 'line',
+                    data: {
+                      labels: ['July 16', 'Aug 16', 'Sep 16', 'Oct 16', 'Nov 16', 'Dec 16', 'Jan 17', 'Feb 17', 'March 17'],
+                      datasets: [{
+                        label: 'Number of Bikes',
+                        data: [1108, 1094, 506, 386, 240, 163, 168, 145, 189],
+                        backgroundColor: "#D13028"
+                      }]
+                    }
+                 });</script>
+
+               </div>
+
+               <div class="col s12 m12 l12">
+                  <p>This line graph was drawn from the averages of the distance travelled each month. As shown, there is a sharp drop between August and September at the end of the traditional summer break and continues to drop throughout the winter months, and appears to be starting to pick up again around March.</p>
+               </div>
+            </div>
+         </div>
+
+
+   </br></br>
+
+    <!--Footer-->
+        <footer class="page-footer">
+            <div class="container">
+              <div class="row">
+                <div class="col l6 s12">
+                  <h5 class="white-text">Los Angles Bike Share Data</h5>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                  <!--<h5 class="white-text">Links</h5>-->
+                </div>
+              </div>
+            </div>
+            <div class="footer-copyright">
+              <div class="container">
+              <i class="fa fa-copyright">Created for Capital One Challenge</i>
+              <a class="grey-text text-lighten-4 right" href="#!">Made with love by Sydney Berry</a>
+              </div>
+            </div>
+          </footer>
+  </body>
+</html>
