@@ -1602,6 +1602,8 @@ if (Vel) {
   $(document).ready(function () {
     $('.collapsible').collapsible();
     $(".dropdown-button").dropdown();
+    $(".dropdown-trigger").dropdown();
+
   });
 })(jQuery);;(function ($) {
 
