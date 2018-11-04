@@ -18,62 +18,48 @@
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="js/materialize.js"></script>
 
-<!--Navigation Bar-->
-<div class="navbar-fixed">
-   <!--These are the dropdowns for the menu. Their id is called below by the "parent" tab-->
-  <nav>
-    <ul id="deliverables-dropdown" class="dropdown-content">
-      <li><a href="#!">Popular Stations</a></li>
-      <li><a href="#!">Average Distance</a></li>
-      <li><a href="#!">Regular Shares</a></li>
-    </ul>
-    <ul id="about-dropdown" class="dropdown-content">
-      <li><a href="#!">Site Development</a></li>
-      <li><a href="#!">Sydney (me!)</a></li>
-    </ul>
+    <!--Navigation Bar-->
+    <div class="navbar-fixed">
+      <!--These are the dropdowns for the menu. Their id is called below by the "parent" tab-->
+      <nav>
+       <ul id="deliverables-dropdown" class="dropdown-content">
+         <li><a href="#!">Popular Stations</a></li>
+         <li><a href="#!">Average Distance</a></li>
+         <li><a href="#!">Regular Shares</a></li>
+       </ul>
+       <ul id="about-dropdown" class="dropdown-content">
+         <li><a href="#!">Site Development</a></li>
+         <li><a href="#!">Sydney (me!)</a></li>
+       </ul>
 
-    <div class="nav-wrapper"> <a href="#" class="brand-logo center">Psyched to Cycle!</a> <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-      <ul class="left hide-on-med-and-down">
-        <li class="active"><a href="#">Home</a></li>
-        <li><a href="visuals.html">Visuals</a></li>
-        <!--Tab for dropdown for deliveralbes (aside from tables and graphs)-->
-        <li><a class="dropdown-button" data-beloworigin="true" data-hover="true" data-constrainwidth="false" href="otherDeliverables.html" data-activates="deliverables-dropdown">Deliverables</a></li>
+       <div class="nav-wrapper"> <a href="#" class="brand-logo center">Psyched to Cycle!</a> <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+         <ul class="left hide-on-med-and-down">
+           <li class="active"><a href="#">Home</a></li>
+           <li><a href="visuals.html">Visuals</a></li>
+           <!--Tab for dropdown for deliveralbes (aside from tables and graphs)-->
+           <li><a class="dropdown-button" data-beloworigin="true" data-hover="true" data-constrainwidth="false" href="otherDeliverables.html" data-activates="deliverables-dropdown">Deliverables</a></li>
 
-        <!--Tab for dropdown for about page that covers site development, and information about me-->
-        <li><a class="dropdown-button" data-beloworigin="true" data-hover="true" data-constrainwidth="false" href="process.html" data-activates="about-dropdown">About</a></li>
-      </ul>
-      <!--The below section is for web obtimization. When the screen size becomes so small, the navigation bar is condensed-->
-      <ul id="mobile-demo" class="side-nav">
-        <li class="no-padding">
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="visuals.html">Visuals</a></li>
-          </ul>
-        </li>
-      </ul>
-    </div>
-  </nav>
-</div>
-<script src="http://code.jquery.com/jquery-latest.min.js"></script>
-<!-- Compiled and minified JavaScript -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
-<script>
- $(".button-collapse").sideNav();
-</script>
-
-
-
-
-    <!--<div class="navbar-fixed">
-        <nav>
-          <div class="nav-wrapper">
-            <ul class="right hide-on-med-and-down">
-              <li><a href="index.html">Home</a></li>
-              <!--<li><a href="process.html">Process</a></li>-->
-            <!--</ul>
-          </div>
-        </nav>
-     </div>-->
+           <!--Tab for dropdown for about page that covers site development, and information about me-->
+           <li><a class="dropdown-button" data-beloworigin="true" data-hover="true" data-constrainwidth="false" href="process.html" data-activates="about-dropdown">About</a></li>
+         </ul>
+         <!--The below section is for web obtimization. When the screen size becomes so small, the navigation bar is condensed-->
+         <ul id="mobile-demo" class="side-nav">
+           <li class="no-padding">
+             <ul>
+               <li><a href="index.html">Home</a></li>
+               <li><a href="visuals.html">Visuals</a></li>
+             </ul>
+           </li>
+         </ul>
+       </div>
+     </nav>
+   </div>
+   <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+   <!-- Compiled and minified JavaScript -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+   <script>
+    $(".button-collapse").sideNav();
+   </script>
 
     <!-- particles.js container -->
     <div id="particles-js" style="height:80%;width:100%"></div>
