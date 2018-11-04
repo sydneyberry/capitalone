@@ -9,7 +9,10 @@
 This site is meant to provide different visuals and representations of a bike share dataset in Los Angles for July 2016-March 2017. It was developed with different languages and frameworks, as detailed below.
 
 ## Technologies Used
-
+* Chart.js
+* Materalize CSS/Bootstrap
+* Excel Visual Basic
+* HTML/CSS/JavaScript
 
 ## Personal Reflection
 I did not start this site until a week ago. Why? Because I didn't think I could do it. Looking at the data, I was extremely intimidated by the sheer amount of data and I had no idea how or where to start. 
