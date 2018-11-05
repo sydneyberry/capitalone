@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+     <!--Import Google Icon Font-->
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+     <!--Import materialize.css-->
+     <link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
+     <!--Let browser know website is optimized for mobile-->
+     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+     <meta charset="utf-8">
+
+     <title>Capital One Challenge 2018</title>
+   </head>
+
+   <body>
+      <!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+      <script type="text/javascript" src="js/materialize.js"></script>
+
+      <!--Navigation Bar-->
+      <div class="navbar-fixed">
+        <!--These are the dropdowns for the menu. Their id is called below by the "parent" tab-->
+        <nav class="nav extended">
+         <ul id="deliverables-dropdown" class="dropdown-content">
+           <li><a href="#!">Popular Stations</a></li>
+           <li><a href="#!">Average Distance</a></li>
+           <li><a href="#!">Regular Shares</a></li>
+         </ul>
+
+         <div class="nav-wrapper"> <a href="#" class="brand-logo center">Psyched to Cycle!</a> <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+           <ul class="left hide-on-med-and-down">
+             <li><a href="index.html">Home</a></li>
+             <li><a href="visuals.html">Visuals</a></li>
+             <!--Tab for dropdown for deliveralbes (aside from tables and graphs)-->
+             <li><a class="dropdown-button" data-beloworigin="true" data-hover="true" data-constrainwidth="false" href="otherDeliverables.html" data-activates="deliverables-dropdown">Deliverables</a></li>
+
+             <!--Tab for dropdown for about page that covers site development, and information about me-->
+             <li class="active"><a href="process.html">About</a></li>
+           </ul>
+           <!--The below section is for web obtimization. When the screen size becomes so small, the navigation bar is condensed-->
+           <ul id="mobile-demo" class="side-nav">
+             <li class="no-padding">
+               <ul>
+                 <li><a href="index.html">Home</a></li>
+                 <li><a href="visuals.html">Visuals</a></li>
+                 <li><a href="otherDeliverables.html">Other Deliverables.html</a></li>
+                 <li><a href="process.html">About</a></li>
+               </ul>
+             </li>
+           </ul>
+         </div>
+      </nav>
+     </div>
+     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+     <!-- Compiled and minified JavaScript -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+     <script>
+      $(".button-collapse").sideNav();
+     </script>
+
+      <!-- particles.js container -->
+      <div id="particles-js" style="height:70%;width:100%"></div>
+
+      <!--Particles Scripts -->
+      <script src="js/particles.js"></script>
+      <script src="js/app.js"></script>
+
+      <div class="container" id="head">
+      </br></br></br>
+        <h1 class="white-text center-align"><b>Process</b></h1>
+        <h5 class="grey-text center-align">A look at how this site was created</h5>
+      </div>
+
+   </br></br></br></br></br></br></br></br></br>
+
+       <div class="container">
+         <div class="row">
+            <h5 align="center">Developing this site</h5>
+            <p>This site was developed with a mix of differnt languages and then hosted using GitHub pages. For the layout of the site, Materialize and Bootstrap were used to help set up the CSS/grid system HTML. Additionally, I coded a lot with HTML/CSS in general for helping bring this site to life. Additionally, Particle.js was used for the moving background pattern at the top of each page while Chart.js was used for
+         </div>
+      </div> <!--container-->
+       </br></br></br>
+
+       <!--Footer-->
+           <footer class="page-footer">
+            <div class="container">
+              <div class="row">
+                <div class="col l6 s12">
+                  <h5 class="white-text">Los Angles Bike Share Data</h5>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                </div>
+              </div>
+            </div>
+               <div class="footer-copyright">
+                 <div class="container">
+                 <i class="fa fa-copyright">Created for Capital One Challenge</i>
+                 <a class="grey-text text-lighten-4 right" href="#!">Made with love by Sydney Berry</a>
+                 </div>
+               </div>
+             </footer>
+
+   </body>
+</html>
