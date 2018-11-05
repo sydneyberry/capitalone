@@ -22,13 +22,9 @@
         <!--These are the dropdowns for the menu. Their id is called below by the "parent" tab-->
         <nav class="nav extended">
          <ul id="deliverables-dropdown" class="dropdown-content">
-           <li><a href="#!">Popular Stations</a></li>
-           <li><a href="#!">Average Distance</a></li>
-           <li><a href="#!">Regular Shares</a></li>
-         </ul>
-         <ul id="about-dropdown" class="dropdown-content">
-           <li><a href="#!">Site Development</a></li>
-           <li><a href="#!">Sydney (me!)</a></li>
+           <li><a href="otherDeliverables.html#popStat">Popular Stations</a></li>
+           <li><a href="otherDeliverables.html#avgDist">Average Distance</a></li>
+           <li><a href="otherDeliverables.html#regShares">Regular Shares</a></li>
          </ul>
 
          <div class="nav-wrapper"> <a href="#" class="brand-logo center">Psyched to Cycle!</a> <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
@@ -39,7 +35,7 @@
              <li class="active"><a class="dropdown-button" data-beloworigin="true" data-hover="true" data-constrainwidth="false" href="otherDeliverables.html" data-activates="deliverables-dropdown">Deliverables</a></li>
 
              <!--Tab for dropdown for about page that covers site development, and information about me-->
-             <li><a class="dropdown-button" data-beloworigin="true" data-hover="true" data-constrainwidth="false" href="process.html" data-activates="about-dropdown">About</a></li>
+             <li><a href="process.html">About</a></li>
            </ul>
            <!--The below section is for web obtimization. When the screen size becomes so small, the navigation bar is condensed-->
            <ul id="mobile-demo" class="side-nav">
@@ -47,6 +43,8 @@
                <ul>
                  <li><a href="index.html">Home</a></li>
                  <li><a href="visuals.html">Visuals</a></li>
+                 <li><a href="otherDeliverables.html">Other Deliverables.html</a></li>
+                 <li><a href="process.html">About</a></li>
                </ul>
              </li>
            </ul>
@@ -75,8 +73,25 @@
 
    </br></br></br></br></br></br></br></br></br>
 
-       <div class="container" id="info">
-         <div class="row">
+       <div class="container">
+
+          <div class="row">
+             <div class="col s12 m6 l4 rignt-">
+                <h5>Jump to a specific visual: </h5>
+             </div>
+             <div class="col s12 m6 l8" align="center">
+                <a class="waves-effect waves-light btn" href="#popStat">Pass Types</a>
+                <a class="waves-effect waves-light btn" href="#avgDist">Durations</a>
+                <a class="waves-effect waves-light btn" href="#regShares">Passes by Month</a>
+             </div>
+
+          </div>
+          <div>
+             <p align="center">The data for these visuals were gathered from the unedited dataset provided by using Visual Basic in Excel. The code used for each the data in the graphs was broken up individual files for organization and can be found <b><a href="https://github.com/sydneyberry/capitalone/tree/master/data">here</a></b>.</p>
+          </div>
+          <hr>
+
+         <div class="row" id="#popStat">
             <div class="col s12 m12 l12">
                <h5 align="center">So what are some of the most common stations?</h5>
                <p>This becomes an important question when predicting how much traffic is passing through each station, especially in provinding enough avaliable rides for the demand. Different factors, such as seasons or area, can affect how busy certain area are. Below, the 5 most popular stations during July 2016 to March 2017 are shown.</p>
@@ -105,7 +120,7 @@
       <hr>
       </br>
          <!--DELIVERABLE 2-->
-         <div class="row">
+         <div class="row" id="avgDist">
             <h5 align="center">Average Distance Travelled</h5>
             <p>The average duartion of rides by month can be found here, but what about the average distance of rides? There is no data labelled for distance ridden and or paths taken, so it is difficult to draw how far each ride travelled. According to this site where the data came from, the duration column was defined as the length of the trip. Additionally, according to <a href="https://www.ilovebicycling.com/how-accurate-are-google-maps-cycling-directions/">here</a>, the average speed of a bike is 12 MPH on a flat surface, as used in Google Maps cycling estimations. For this calculation, the average total distance for each trip was calculated, opposed to the average displacement from the starting station.</p>
             <p align="center">The average distance travelled per bike share is <b>311 miles</b>.</p>
@@ -115,7 +130,7 @@
       <hr>
       </br>
          <!--DELIVERABLE 3-->
-         <div class="row">
+         <div class="row" id="regShares">
             <h5 align="center">Biking in Regular Commutes</h5>
             <p>Bike Shares are a great way to get around town -- both for physical health and planet health. For those that commute regularly, passes help cut costs of using the bikes. Given this, rides with "Walk-Ups" pass type are not those that regularly include bike share as a part of their cycling. Additionally, the data given did not identify how often an individual rode/specific pass was used. Considering this, how many times someone used their passes was not able to be identified, so the number of rides with a pass was observed instead.</p>
             <p align="center">It was concluded there were <b>91,203 regular commutes</b> in the data provided.</p>
