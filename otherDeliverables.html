@@ -18,20 +18,47 @@
       <script type="text/javascript" src="js/materialize.js"></script>
 
       <!--Navigation Bar-->
-      <!--<div class="navbar-fixed">-->
-        <nav>
-          <div class="nav-wrapper" role="navigation">
-             <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="fa fa-bars"></i></a>
-            <ul class="right hide-on-med-and-down">
-              <li><a href="index.html">Home</a></li>
-              <li><a href="visuals.html">Trend Visuals</a></li>
-              <li><a href="otherDeliverables.html">Deliverables</a></li>
-              <li><a href="process.hmtl">This Site</a></li>
-              <!--<li><a href="process.html">Process</a></li>-->
-            </ul>
-          </div>
-        </nav>
-      <!--</div>-->
+      <div class="navbar-fixed">
+        <!--These are the dropdowns for the menu. Their id is called below by the "parent" tab-->
+        <nav class="nav extended">
+         <ul id="deliverables-dropdown" class="dropdown-content">
+           <li><a href="#!">Popular Stations</a></li>
+           <li><a href="#!">Average Distance</a></li>
+           <li><a href="#!">Regular Shares</a></li>
+         </ul>
+         <ul id="about-dropdown" class="dropdown-content">
+           <li><a href="#!">Site Development</a></li>
+           <li><a href="#!">Sydney (me!)</a></li>
+         </ul>
+
+         <div class="nav-wrapper"> <a href="#" class="brand-logo center">Psyched to Cycle!</a> <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+           <ul class="left hide-on-med-and-down">
+             <li><a href="index.html">Home</a></li>
+             <li><a href="visuals.html">Visuals</a></li>
+             <!--Tab for dropdown for deliveralbes (aside from tables and graphs)-->
+             <li class="active"><a class="dropdown-button" data-beloworigin="true" data-hover="true" data-constrainwidth="false" href="otherDeliverables.html" data-activates="deliverables-dropdown">Deliverables</a></li>
+
+             <!--Tab for dropdown for about page that covers site development, and information about me-->
+             <li><a class="dropdown-button" data-beloworigin="true" data-hover="true" data-constrainwidth="false" href="process.html" data-activates="about-dropdown">About</a></li>
+           </ul>
+           <!--The below section is for web obtimization. When the screen size becomes so small, the navigation bar is condensed-->
+           <ul id="mobile-demo" class="side-nav">
+             <li class="no-padding">
+               <ul>
+                 <li><a href="index.html">Home</a></li>
+                 <li><a href="visuals.html">Visuals</a></li>
+               </ul>
+             </li>
+           </ul>
+         </div>
+      </nav>
+     </div>
+     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+     <!-- Compiled and minified JavaScript -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+     <script>
+      $(".button-collapse").sideNav();
+     </script>
 
       <!-- particles.js container -->
       <div id="particles-js" style="height:70%;width:100%"></div>
@@ -52,19 +79,17 @@
          <div class="row">
             <div class="col s12 m12 l12">
                <h5 align="center">So what are some of the most common stations?</h5>
-               <p>This becomes an important question when predicting how much traffic is passing through each station, especially in provinding enough avaliable rides for the demand. Different factors, such as seasons or area, can affect how busy certain area are. Below, the most top 5 most popular stations during July 2016 to March 2017 are shown.</p>
+               <p>This becomes an important question when predicting how much traffic is passing through each station, especially in provinding enough avaliable rides for the demand. Different factors, such as seasons or area, can affect how busy certain area are. Below, the 5 most popular stations during July 2016 to March 2017 are shown.</p>
             </div>
           </div>
           <div class="row">
              <div class="col s12 m6 l6" align="center">
                 <h6><b>Most popular start stations:</b></h6>
-                <ol>
-                   <li>1. Station 3069: 5,138 Passes</li>
-                   <li>2. Station 3030: 5,059 Passes</li>
-                   <li>3. Station 3005: 4,883 Passes</li>
-                   <li>4. Station 3064: 4,661 Passes</li>
-                   <li>5. Station 3031: 4,629 Passes</li>
-               </ol>
+                  1. Station 3069: 5,138 Passes</br>
+                  2. Station 3030: 5,059 Passes</br>
+                  3. Station 3005: 4,883 Passes</br>
+                  4. Station 3064: 4,661 Passes</br>
+                  5. Station 3031: 4,629 Passes</br>
              </div>
              <div class="col s12 m6 l6" align="center">
                 <h6><b>Most popular end stations:</b></h6>
@@ -76,9 +101,20 @@
 
              </div>
           </div>
-
-
+      <hr>
+         <!--DELIVERABLE 2-->
+         <div class="row">
+            <h5 align="center">Average Distance Travelled</h5>
+            <p>The average duartion of rides by month can be found here, but what about the average distance of rides? There is no data labelled for distance ridden and or paths taken, so it is difficult to draw how far each ride travelled. </p>
          </div>
+      <hr>
+         <!--DELIVERABLE 3-->
+         <div class="row">
+            <h5 align="center">Biking in Regular Commutes</h5>
+            <p>Bike Shares are a great way to get around town -- both for physical health and planet health. For those that commute regularly, passes help cut costs of using the bikes. Given this, rides with "Walk-Ups" pass type are not those that regularly include bike share as a part of their cycling. Additionally, the data given did not identify how often an individual rode/specific pass was used. Considering this, how many times someone used their passes was not able to be identified, so the number of rides with a pass was observed instead.</p>
+            <p align="center">It was concluded there were <b>91,203 regular commutes</b> in the data provided.</p>
+         </div>
+   </div> <!--container-->
        </br></br></br>
 
        <!--Footer-->

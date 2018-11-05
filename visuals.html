@@ -37,8 +37,8 @@
 
        <div class="nav-wrapper"> <a href="#" class="brand-logo center">Psyched to Cycle!</a> <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
          <ul class="left hide-on-med-and-down">
-           <li class="active"><a href="#">Home</a></li>
-           <li><a href="visuals.html">Visuals</a></li>
+           <li><a href="index.html">Home</a></li>
+           <li class="active"><a href="visuals.html">Visuals</a></li>
            <!--Tab for dropdown for deliveralbes (aside from tables and graphs)-->
            <li><a class="dropdown-button" data-beloworigin="true" data-hover="true" data-constrainwidth="false" href="otherDeliverables.html" data-activates="deliverables-dropdown">Deliverables</a></li>
 
@@ -87,8 +87,11 @@
             <div class="col s12 m6 l8" align="center">
                <a class="waves-effect waves-light btn" href="#VisualOne">Pass Types</a>
                <a class="waves-effect waves-light btn" href="#VisualTwo">Durations</a>
-               <a class="waves-effect waves-light btn" href="#VisualThree">button</a>
+               <a class="waves-effect waves-light btn" href="#VisualThree">Passes by Month</a>
             </div>
+         </div>
+         <div>
+            <p align="center">The data for these visuals were gathered from the unedited dataset provided by using Visual Basic in Excel. The code used for each the data in the graphs was broken up individual files for organization and can be found <b><a href="https://github.com/sydneyberry/capitalone/tree/master/data">here</a></b>.</p>
          </div>
       <hr>
 </br>
@@ -102,27 +105,27 @@
                     <canvas id="myChart" height="100" width="300"></canvas>
 
                      <script>
-                     var ctx = document.getElementById('myChart').getContext('2d');
-                     var myChart = new Chart(ctx, {
-                       type: 'horizontalBar',
-                       data: {
-                         labels: ['Flex Pass', 'Monthly Pass', 'Staff Annual', 'Walk-Up'],
-                         datasets: [{
-                           data: [9517, 81304, 382, 41224],
-                           backgroundColor: ["#D13028", "#9E241E", "#741E19", "#5C1512"],
-                           label: 'Average Distance'
-                        }]
-                     },
-                    //},
-                    options: {
-                       legend: {display: false},
-                       title: {
-                          display: true,
-                          text: 'Number of each passes used'
+                        var ctx = document.getElementById('myChart').getContext('2d');
+                        var myChart = new Chart(ctx, {
+                          type: 'horizontalBar',
+                          data: {
+                            labels: ['Flex Pass', 'Monthly Pass', 'Staff Annual', 'Walk-Up'],
+                            datasets: [{
+                              data: [9517, 81304, 382, 41224],
+                              backgroundColor: ["#D13028", "#9E241E", "#741E19", "#5C1512"],
+                              label: 'Average Distance'
+                           }]
+                        },
+                       //},
+                       options: {
+                          legend: {display: false},
+                          title: {
+                             display: true,
+                             text: 'Number of each passes used'
+                         }
                        }
-                    }
-                    });
-                        </script>
+                       });
+                     </script>
                </div>
                <div class="col s12 m12 l12">
                   <p align="left">The bar graph on the left represents how many of each pass type were used over the quarter. Looking at this, the monthly pass was the most common pass, while the staff annual was the least used pass. There was a large range between these two types that comes out to a 80,922 pass difference. If you hover each bar, you can see the specific amount of each.</p>
@@ -157,9 +160,64 @@
                   <p>This line graph was drawn from the averages of the distance travelled each month. As shown, there is a sharp drop between August and September at the end of the traditional summer break and continues to drop throughout the winter months, and appears to be starting to pick up again around March.</p>
                </div>
             </div>
-         </div>
 <hr>
-<!--VISUAL THREE-->
+         <!--VISUAL THREE-->
+            <div class="row">
+               <!--chart-->
+               <div class="col s12 m12 l12">
+                  <h5 align="center" id="VisualThree">Number of Passes Used Each Month</h5>
+                  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.4/Chart.min.js"></script>
+                          <!--<h2 class="dark-blue-text center"><b>Here's what I've been up to</b></h2>-->
+                  <canvas id="line-chart" height="75" width="200"></canvas>
+
+                  <script>
+                        new Chart(document.getElementById("line-chart"), {
+                       type: 'line',
+                       data: {
+                         labels: ['July 16', 'Aug 16', 'Sep 16', 'Oct 16', 'Nov 16', 'Dec 16', 'Jan 17', 'Feb 17', 'March 17'],
+                         datasets: [{
+                             data: [9355,13193, 10668, 12051, 9379, 6960, 6401, 6155, 8451],
+                             label: "Monthly Pass",
+                             borderColor: "#3e95cd",
+                             fill: false
+                           }, {
+                             data: [1667,1586, 1178, 1131, 901, 627,670, 599, 1023],
+                             label: "Flex Pass",
+                             borderColor: "#8e5ea2",
+                             fill: false
+                           }, {
+                             data: [398,9374, 8020, 4861, 4057, 2894,3276, 2779, 4432],
+                             label: "Walk-Up",
+                             borderColor: "#3cba9f",
+                             fill: false
+                           }, {
+                             data: [0,0, 0, 116, 93, 132,0, 0, 0],
+                             label: "Staff Annual",
+                             borderColor: "#e8c3b9",
+                             fill: false
+                           }
+                         ]
+                       },
+                       options: {
+                         title: {
+                           display: true,
+                           text: 'Number of passes used by month'
+                         }
+                       }
+                     });
+                  </script>
+
+
+
+               </div>
+
+               <!--about this visual-->
+               <div class="col s12 m12 l12">
+                  <p>In addition to the duration of rides decreasing in the winter, the number of times passes used also decreased moving into November and December, while it appears to start picking up again in March when the dataset ends. This is releavant in seeing when the number of times bikes are being used increases or decreases.</P>
+                  <p>To focus just one type of pass, click the others in the legend to elimate them from the current viewing. Clicking again can bring them back. This will also change the legend accordingly to the visible variables' scale(s) and will zoom in.</p>
+               </div>
+            </div>
+         </div>
 
 
    </br></br>
